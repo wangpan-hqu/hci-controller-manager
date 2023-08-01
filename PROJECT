@@ -1,0 +1,44 @@
+domain: wjyl.com
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+projectName: hci-controller-manager
+repo: git.netfuse.cn/algo/hci-controller-manager
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: wjyl.com
+  group: hci
+  kind: VirtualMachineImage
+  path: git.netfuse.cn/algo/hci-controller-manager/apis/hci/v1beta1
+  version: v1beta1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: wjyl.com
+  group: hci
+  kind: VirtualMachineBackup
+  path: git.netfuse.cn/algo/hci-controller-manager/apis/hci/v1beta1
+  version: v1beta1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: wjyl.com
+  group: hci
+  kind: VirtualMachineRestore
+  path: git.netfuse.cn/algo/hci-controller-manager/apis/hci/v1beta1
+  version: v1beta1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: wjyl.com
+  group: hci
+  kind: Setting
+  path: git.netfuse.cn/algo/hci-controller-manager/apis/hci/v1beta1
+  version: v1beta1
+version: "3"

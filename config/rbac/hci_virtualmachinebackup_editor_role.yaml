@@ -1,0 +1,24 @@
+# permissions for end users to edit virtualmachinebackups.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: virtualmachinebackup-editor-role
+rules:
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachinebackups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachinebackups/status
+  verbs:
+  - get

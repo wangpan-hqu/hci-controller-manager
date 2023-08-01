@@ -1,0 +1,380 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - events
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - persistentvolumeclaims
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - persistentvolumes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - persistentvolumeclaims
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - persistentvolumeclaims/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ""
+  resources:
+  - persistentvolumeclaims/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - keypairs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - keypairs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - keypairs/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - settings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - settings/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - settings/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachinebackups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachinebackups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachinebackups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachineimages
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachineimages/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachineimages/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachinerestores
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachinerestores/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - virtualmachinerestores/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - kubevirt.io
+  resources:
+  - virtualmachineinstances
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - kubevirt.io
+  resources:
+  - virtualmachines
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - longhorn.io
+  resources:
+  - backingimages
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - longhorn.io
+  resources:
+  - backingimages/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - longhorn.io
+  resources:
+  - backingimages/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - longhorn.io
+  resources:
+  - backups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - longhorn.io
+  resources:
+  - settings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - longhorn.io
+  resources:
+  - volumes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - snapshot.storage.k8s.io
+  resources:
+  - volumesnapshotclasses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - snapshot.storage.k8s.io
+  resources:
+  - volumesnapshotcontents
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - snapshot.storage.k8s.io
+  resources:
+  - volumesnapshots
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - storage.k8s.io
+  resources:
+  - storageclasses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - storage.k8s.io
+  resources:
+  - storageclasses/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - storage.k8s.io
+  resources:
+  - storageclasses/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - subresources.kubevirt.io
+  resources:
+  - virtualmachines
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - subresources.kubevirt.io
+  resources:
+  - virtualmachines/start
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - subresources.kubevirt.io
+  resources:
+  - virtualmachines/stop
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch

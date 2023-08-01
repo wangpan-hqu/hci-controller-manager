@@ -1,0 +1,24 @@
+# permissions for end users to edit settings.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: setting-editor-role
+rules:
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - settings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - hci.wjyl.com
+  resources:
+  - settings/status
+  verbs:
+  - get

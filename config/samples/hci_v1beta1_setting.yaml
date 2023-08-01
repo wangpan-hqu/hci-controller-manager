@@ -1,0 +1,6 @@
+apiVersion: hci.wjyl.com/v1beta1
+kind: Setting
+metadata:
+  name: setting-sample
+spec:
+  # TODO(user): Add fields here
